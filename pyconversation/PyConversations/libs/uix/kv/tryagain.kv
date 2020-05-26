@@ -1,0 +1,84 @@
+#: kivy 1.9.1
+#: import MDFlatButton kivymd.uix.button.MDFlatButton
+
+<Tryagain>:
+    name: 'tryagain'
+
+    BoxLayout:
+        id: box_avatar
+        orientation: 'vertical'
+
+        canvas:
+            Color:
+                rgba: [255/255, 235/255, 204/255, 1]
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+    BoxLayout:
+        id: box
+        orientation: 'vertical'
+        padding: dp(50), dp(10), dp(50), dp(10)
+
+        Label:
+            id: label_1
+            bold: True
+            color: 0, 0, 0, 1
+            height: root.height * 0.1
+
+        GridLayout:
+            id: box_avatar
+            cols: 1
+            orientation: 'vertical'
+
+            Label:
+                id: result_1
+                bold: True
+                color: 0, 0, 0, 1
+                size_hint: 1, 2
+
+            Label:
+                id: result_2
+                bold: True
+                color: 0, 0, 0, 1
+                size_hint: 1, 2
+
+            Label:
+                id: result_3
+                bold: True
+                color: 0, 0, 0, 1
+                size_hint: 1, 2
+
+            Label:
+                id: result_4
+                bold: True
+                color: 0, 0, 0, 1
+                size_hint: 1, 2
+
+            Label:
+                id: result_5
+                bold: True
+                color: 0, 0, 0, 1
+                size_hint: 1, 2
+
+        Label:
+            id: label_result
+            bold: True
+            color: 0, 0, 0, 1
+            height: root.height * 0.1
+
+        Button:
+            id: start
+            bold: True
+            text: 'Restart'
+            background_normal: ''
+            background_color: [54 / 255, 48 / 255, 115 / 255, 1]
+            size_hint_y: None
+            color: 1,1,1,1
+            font_size: self.height * 0.4
+
+        Label:
+            id: label_4
+            bold: True
+            color: 0, 0, 0, 1
+            height: root.height * 0.1

@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+
+
+
+<BaseScreen>:
+    name: 'base'
+
+    BoxLayout:
+        id: box_avatar
+        orientation: 'vertical'
+
+        canvas:
+            Color:
+                rgba: [255/255, 235/255, 204/255, 1]
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+    MDList:
+        cols: 1
+        size_hint_y: 0.6
+        height: self.minimum_height
+        padding: dp(50), dp(10), dp(50), dp(10)
+
+        OneLineListItem:
+            text: app.translation._('Find The Twins')
+            on_press: app.show_pair_screen()
+
+        OneLineListItem:
+            text: app.translation._('Schulte Table')
+            on_press: app.schulte_table_screen()

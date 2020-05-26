@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "main.py", line 73, in main
+    app.run()
+  File "/Users/serhii/Documents/projects/kivy/.ve/lib/python3.7/site-packages/kivy/app.py", line 855, in run
+    runTouchApp()
+  File "/Users/serhii/Documents/projects/kivy/.ve/lib/python3.7/site-packages/kivy/base.py", line 504, in runTouchApp
+    EventLoop.window.mainloop()
+  File "/Users/serhii/Documents/projects/kivy/.ve/lib/python3.7/site-packages/kivy/core/window/window_sdl2.py", line 747, in mainloop
+    self._mainloop()
+  File "/Users/serhii/Documents/projects/kivy/.ve/lib/python3.7/site-packages/kivy/core/window/window_sdl2.py", line 479, in _mainloop
+    EventLoop.idle()
+  File "/Users/serhii/Documents/projects/kivy/.ve/lib/python3.7/site-packages/kivy/base.py", line 345, in idle
+    Builder.sync()
+  File "/Users/serhii/Documents/projects/kivy/.ve/lib/python3.7/site-packages/kivy/lang/builder.py", line 788, in sync
+    call_fn(next_args[:-1], None, None)
+  File "/Users/serhii/Documents/projects/kivy/.ve/lib/python3.7/site-packages/kivy/lang/builder.py", line 76, in call_fn
+    setattr(element, key, e_value)
+  File "kivy/graphics/context_instructions.pyx", line 275, in kivy.graphics.context_instructions.Color.rgba.__set__
+TypeError: float() argument must be a string or a number, not 'list'

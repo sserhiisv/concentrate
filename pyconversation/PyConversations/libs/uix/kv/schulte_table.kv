@@ -1,0 +1,341 @@
+#: kivy 1.9.1
+#: import MDFlatButton kivymd.uix.button.MDFlatButton
+
+<SchulteTable>:
+    name: 'schulte_table'
+
+    BoxLayout:
+        id: box_avatar
+        orientation: 'vertical'
+
+        canvas:
+            Color:
+                rgba: [255/255, 235/255, 204/255, 1]
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+    BoxLayout:
+        id: box_avatar
+        orientation: 'vertical'
+
+        GridLayout:
+            id: grid_buttons
+            cols: 5
+            rows: 2
+            padding: dp(10), dp(10), dp(10), dp(10)
+            size_hint: 1, 0.06
+            row_force_default: True
+            row_default_height: self.height
+            background_color: [255, 255, 255, 0]
+
+            canvas:
+                Color:
+                    rgba: 1, 1, 1, 0
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+
+            Button:
+                id: button_dynamic
+                bold: True
+                text: 'Dynamic'
+                on_release: app.schulte_table.change_mode('dynamic', True)
+                background_normal: ''
+                background_color: [54 / 255, 48 / 255, 115 / 255, 1]
+                color: [1, 1, 1, 1]
+
+            Button:
+                id: button_static
+                bold: True
+                text: 'Static'
+                on_release: app.schulte_table.change_mode('static', True)
+                background_normal: ''
+                background_color: [255 / 255, 235 / 255, 204 / 255, 1]
+                color: [0, 0, 0, 1]
+
+            Button:
+                id: button_lower
+                bold: True
+                text: 'Lower'
+                on_release: app.schulte_table.change_case('lower', True)
+                background_normal: ''
+                background_color: [54 / 255, 48 / 255, 115 / 255, 1]
+                color: [1, 1, 1, 1]
+
+            Button:
+                id: button_upper
+                bold: True
+                text: 'Upper'
+                background_normal: ''
+                background_color: [255 / 255, 235 / 255, 204 / 255, 1]
+                on_release: app.schulte_table.change_case('upper', True)
+                color: [0, 0, 0, 1]
+
+            Button:
+                id: button_mixed
+                bold: True
+                text: 'Mixed'
+                on_release: app.schulte_table.change_case('mixed', True)
+                background_normal: ''
+                background_color: [255 / 255, 235 / 255, 204 / 255, 1]
+                color: [0, 0, 0, 1]
+
+            Button:
+                id: button_color
+                bold: True
+                text: 'Color'
+                on_release: app.schulte_table.colorize(True, True)
+                background_normal: ''
+                background_color: [255 / 255, 235 / 255, 204 / 255, 1]
+                color: [0, 0, 0, 1]
+
+            Button:
+                id: button_bw
+                bold: True
+                text: 'B & W'
+                on_release: app.schulte_table.colorize(False, True)
+                background_normal: ''
+                background_color: [54 / 255, 48 / 255, 115 / 255, 1]
+                color: [1, 1, 1, 1]
+
+        Label:
+            id: label
+            bold: True
+            color: 0, 0, 0, 1
+            text: ''
+            font_size: self.height * 0.3
+            size_hint_y: None
+            height: root.height * 0.2
+
+        GridLayout:
+            id: grid
+            cols: 5
+            rows: 5
+            padding: dp(10), dp(10), dp(10), dp(10)
+
+            Button:
+                id: button_1
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_1.text, 'button_1')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_2
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_2.text, 'button_2')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_3
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_3.text, 'button_3')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_4
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_4.text, 'button_4')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_5
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_5.text, 'button_5')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_6
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_6.text, 'button_6')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_7
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_7.text, 'button_7')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_8
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_8.text, 'button_8')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_9
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_9.text, 'button_9')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_10
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_10.text, 'button_10')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_11
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_11.text, 'button_11')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_12
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_12.text, 'button_12')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_13
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_13.text, 'button_13')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_14
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_14.text, 'button_14')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_15
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_15.text, 'button_15')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_16
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_16.text, 'button_16')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_17
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_17.text, 'button_17')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_18
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_18.text, 'button_18')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_19
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_19.text, 'button_19')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_20
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_20.text, 'button_20')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_21
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_21.text, 'button_21')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_22
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_22.text, 'button_22')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_23
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_23.text, 'button_23')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_24
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_24.text, 'button_24')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)
+
+            Button:
+                id: button_25
+                bold: True
+                size_hint_y: None
+                height: self.width
+                font_size: self.height * 0.7
+                on_press: root.submit(button_25.text, 'button_25')
+                on_release: app.schulte_table.show_end_schulte_game(root.finished)

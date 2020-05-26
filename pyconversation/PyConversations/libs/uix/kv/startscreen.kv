@@ -1,0 +1,47 @@
+# -*- coding: utf-8 -*-
+
+#:import NavDrawer libs.uix.baseclass.navdrawer.NavDrawer
+#:import BaseScreen libs.uix.baseclass.basescreen.BaseScreen
+#:import Tryagain libs.uix.baseclass.tryagain.Tryagain
+#:import SchulteTable libs.uix.baseclass.schulte_table.SchulteTable
+#:import SchulteTableType libs.uix.baseclass.schulte_table_type.SchulteTableType
+#:import Pair libs.uix.baseclass.pairscreen.Pair
+
+<StartScreen>
+
+    MDToolbar:
+        id: action_bar
+        background_color: [54 / 255, 48 / 255, 115 / 255, 1]
+        title: app.title
+        left_action_items: [['menu', lambda x: nav_drawer.toggle_nav_drawer()]]
+        elevation: 10
+        md_bg_color: [54 / 255, 48 / 255, 115 / 255, 1]
+        pos_hint: {"top": 1}
+
+    ScreenManager:
+        id: manager
+        size_hint_y: None
+        height: root.height - action_bar.height
+
+        BaseScreen:
+            id: base
+
+#        About:
+#            id: about
+
+        Pair:
+            id: pair
+
+        Tryagain:
+            id: tryagain
+
+        SchulteTable:
+            id: schulte_table
+
+        SchulteTableType:
+            id: schulte_table_type
+
+    MDNavigationDrawer:
+        id: nav_drawer
+
+        NavDrawer:
